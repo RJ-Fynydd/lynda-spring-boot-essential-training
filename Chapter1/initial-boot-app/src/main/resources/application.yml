@@ -1,13 +1,20 @@
 management:
     endpoints:
-        beans:
-            enabled: true
         web:
-            expose: "*"
             exposure:
                 include: "*"
-
-
+---
+info:
+    app:
+        name: Spring boot test project.
+        version: 1.0.0
+        description: A test Spring Boot Project.
+---
+spring:
+    output:
+        ansi:
+            enabled: always
+---
 spring:
     profiles: dev
 server:

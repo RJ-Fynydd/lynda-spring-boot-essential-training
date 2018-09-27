@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xlms:th="http://www.thymeleaf.org">
+    <head>
+        <title>Nader Hotel | Room List</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link th:href="@{/css/rooms.css}" rel="stylesheet" />
+    </head>
+    <body>
+        <table>
+            <thead>
+                <th>Number</th>
+                <th>Name</th>
+                <th>info</th>
+            </thead>
+            <tbody>
+                <tr th:each="room:${rooms}">
+                    <td th:text="${room.number}"></td>
+                    <td th:text="${room.name}"></td>
+                    <td th:text="${room.info}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

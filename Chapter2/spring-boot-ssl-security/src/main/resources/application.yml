@@ -1,0 +1,39 @@
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+---
+info:
+    app:
+        name: Spring boot test project.
+        version: 1.0.0
+        description: A test Spring Boot Project.
+---
+server:
+    ssl:
+        key-store: classpath:keystore.jks
+        key-store-password: password
+        key-store-type: JKS
+        key-alias: potato
+        key-password: password
+---
+spring:
+    output:
+        ansi:
+            enabled: always
+---
+spring:
+    profiles: dev
+server:
+    port: 8000
+---
+spring:
+    profiles: prod
+server:
+    port: 80
+---
+spring:
+    profiles: test
+server:
+    port: 9000
