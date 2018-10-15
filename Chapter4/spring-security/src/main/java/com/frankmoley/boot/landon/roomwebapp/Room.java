@@ -1,4 +1,4 @@
-package com.nader.boot.WebMvcHotelNader.model;
+package com.frankmoley.boot.landon.roomwebapp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -6,26 +6,18 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- * 
- * @author Richard Nader Jr. <heelyskidrj@gmail.com>
- */
 @Entity
-@Table(name = "ROOM")
+@Table(name="ROOM")
 public class Room {
-
     @Id
-    @Column(name = "ROOM_ID")
+    @Column(name="ROOM_ID")
     @GeneratedValue
     private long id;
-
-    @Column(name = "NAME")
+    @Column(name="NAME")
     private String name;
-
-    @Column(name = "ROOM_NUMBER")
+    @Column(name="ROOM_NUMBER")
     private String number;
-
-    @Column(name = "BED_INFO")
+    @Column(name="BED_INFO")
     private String info;
 
     public Room() {
@@ -33,6 +25,7 @@ public class Room {
     }
 
     public Room(long id, String name, String number, String info) {
+        super();
         this.id = id;
         this.name = name;
         this.number = number;
@@ -70,8 +63,4 @@ public class Room {
     public void setInfo(String info) {
         this.info = info;
     }
-    
-    
-    
-    
 }
